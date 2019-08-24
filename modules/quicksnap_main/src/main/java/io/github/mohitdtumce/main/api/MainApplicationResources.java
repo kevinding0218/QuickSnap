@@ -13,9 +13,9 @@ import java.util.concurrent.atomic.AtomicLong;
 @Produces(MediaType.APPLICATION_JSON)
 public class MainApplicationResources {
 
+	private final AtomicLong countSayHello, countAskName;
 	private String question;
 	private String greetingTemplate;
-	private final AtomicLong countSayHello, countAskName;
 
 	public MainApplicationResources(String question, String greetingTemplate) {
 		this.question = question;
